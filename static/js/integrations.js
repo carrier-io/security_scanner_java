@@ -143,7 +143,6 @@ const javaIntegration = {
                 timeout_threshold,
 
                 status,
-                mode,
             } = this
             return {
                 config,
@@ -159,7 +158,6 @@ const javaIntegration = {
                 timeout_threshold,
 
                 status,
-                mode,
             }
         },
         modal() {
