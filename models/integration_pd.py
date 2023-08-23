@@ -8,7 +8,7 @@ class IntegrationModel(BaseModel):
     artifact_analysis: Optional[bool] = False
     scan_path: Optional[str] = '/tmp/code'
     scan_opts: Optional[str]
-    save_intermediates_to: Optional[str] = '/data/intermediates/sast'
+    # save_intermediates_to: Optional[str] = '/data/intermediates/sast'
     timeout: Optional[int]
     timeout_threshold: Optional[int]
 
@@ -18,5 +18,3 @@ class IntegrationModel(BaseModel):
         except Exception as e:
             log.exception(e)
             return False
-    
-

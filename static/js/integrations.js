@@ -43,8 +43,8 @@ const javaIntegration = {
                         </div>
                     </div>
                 </div>
-            
-                <h9>Save intermediates to</h9>
+
+                <!--<h9>Save intermediates to</h9>
                 <p>
                     <h13>Optional</h13>
                 </p>
@@ -52,7 +52,7 @@ const javaIntegration = {
                        placeholder=""
                        v-model="save_intermediates_to"
                        :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>-->
 
                 <div class="form-group form-row">
                     <div class="col-6">
@@ -90,7 +90,7 @@ const javaIntegration = {
                        v-model="scan_opts"
                        :class="{ 'is-invalid': error.scan_opts }">
                 <div class="invalid-feedback">[[ error.scan_opts ]]</div>
-        
+
                 <h9>Path to code for analysis</h9>
                 <p>
                     <h13>Optional</h13>
@@ -134,7 +134,7 @@ const javaIntegration = {
                 is_default,
                 project_id,
 
-                save_intermediates_to,
+                // save_intermediates_to,
                 composition_analysis,
                 artifact_analysis,
                 scan_path,
@@ -149,7 +149,7 @@ const javaIntegration = {
                 is_default,
                 project_id,
 
-                save_intermediates_to,
+                // save_intermediates_to,
                 composition_analysis,
                 artifact_analysis,
                 scan_path,
@@ -285,13 +285,13 @@ const javaIntegration = {
             test_connection_status: 0,
             id: null,
 
-            save_intermediates_to: '/data/intermediates/sast',
+            // save_intermediates_to: '/data/intermediates/sast',
             composition_analysis: false,
             artifact_analysis: false,
             scan_path: '/tmp/code',
             scan_opts: "",
-            timeout: 15,
-            timeout_threshold: 5,
+            timeout: 3600,
+            timeout_threshold: 1000,
 
             pluginName: 'security_scanner_java',
             api_url: V.build_api_url('integrations', 'integration') + '/',
